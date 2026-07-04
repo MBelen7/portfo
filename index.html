@@ -2255,9 +2255,12 @@
       btnCognitis.addEventListener("click", (e) => {
         e.preventDefault();
         sectionCognitis.classList.add("visible-case");
-        buildDynamicContent();
-        applyLanguage(getInitialLang());
-        ScrollTrigger.refresh();
+        
+        setTimeout(() => {
+          buildDynamicContent();
+          applyLanguage(getInitialLang());
+          ScrollTrigger.refresh();
+        }, 50);
 
         gsap.to(window, {
           duration: 1.2,
@@ -2473,4 +2476,3 @@
     </script>
   </body>
 </html>
-
